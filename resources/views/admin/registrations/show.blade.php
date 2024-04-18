@@ -1,0 +1,98 @@
+@extends('layouts.app')
+
+@section('content')
+    <h3 class="page-title">Registration</h3>
+    {{-- @can('registration_create')
+    <p>
+        <a href="{{ route('admin.registrations.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
+        
+    </p>
+    @endcan --}}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @lang('quickadmin.qa_list')
+        </div>
+
+        <div class="panel-body table-responsive">
+            <table class="table table-bordered table-striped {{ count($registrations) > 0 ? 'datatable' : '' }} @can('registration_delete') dt-select @endcan">
+                <thead>
+                    <tr>
+                        @can('registration_delete')
+                            <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
+                        @endcan
+
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Ticket</th>
+                        <th>Institution</th>
+                        <th>Payment REF</th>
+                        <th>Status</th>
+                        <th>Created At</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    @if (count($registrations) > 0)
+                        @foreach ($registrations as $registration)
+                            <tr data-entry-id="{{ $registration->id }}">
+                                @can('registration_delete')
+                                    <td></td>
+                                @endcan
+
+                                <td>{{ $registration->user->title .' '. $registration->user->first_name . ' ' . $registration->user->middle_name . ' ' . $registration->user->last_name }}</td>
+                                <td>{{ $registration->user->email }}</td>
+                                <td>{{ $registration->user->code . $registration->user->phone }}</td>
+                                <td>{{ $registration->ticket->title .'(' . $registration->ticket->price .')' }}</td>
+                                <td>{{ $registration->user->institution }}</td>
+                                <td>{{ $registration->reference }}</td>
+                                <td>
+                                    @if($registration->status == 'Pending')
+                                       <button class="btn btn-xs btn-warning">{{ $registration->status }}</button>
+                                    @elseif($registration->status == 'Confirmed')
+                                        <button class="btn btn-xs btn-primary">{{ $registration->status }}</button>
+                                    @elseif($registration->status == 'Rejected')
+                                        <button class="btn btn-xs btn-danger">{{ $registration->status }}</button>
+                                    @endif
+                                    </td>
+                                <td>{{ $registration->created_at }}</td>
+                                <td>
+                                    {{-- @can('registration_view')
+                                    <a href="{{ route('admin.registrations.show',[$registration->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
+                                    @endcan --}}
+                                    @can('registration_edit')
+                                    <a href="{{ route('admin.registrations.edit',[$registration->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
+                                    @endcan
+                                    {{-- @can('registration_delete')
+                                    {!! Form::open(array(
+                                        'style' => 'display: inline-block;',
+                                        'method' => 'DELETE',
+                                        'onsubmit' => "return confirm('".trans("quickadmin.qa_are_you_sure")."');",
+                                        'route' => ['admin.registrations.destroy', $registration->id])) !!}
+                                    {!! Form::submit(trans('quickadmin.qa_delete'), array('class' => 'btn btn-xs btn-danger')) !!}
+                                    {!! Form::close() !!}
+                                    @endcan --}}
+                                </td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="5">@lang('quickadmin.qa_no_entries_in_table')</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+        </div>
+    </div>
+@stop
+
+@section('javascript') 
+    <script>
+        @can('registration_delete')
+            // window.route_mass_crud_entries_destroy = '{{ route('admin.registrations.mass_destroy') }}';
+        @endcan
+
+    </script>
+@endsection

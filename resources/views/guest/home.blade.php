@@ -258,7 +258,7 @@
                                     <li>Playbill Number: <strong>209800</strong>,</li>
                                     <li>Account Number: <strong>Cybersecurity</strong></li>
                                 </ul>
-                            <a class="lgx-btn" href="#">Register</a>
+                            <a class="lgx-btn" href="{{ $event->registration_link }}">Register</a>
                         </div>
                     </div>
                     <div class="lgx-right-area lgx-venu-img" style="background-image: url('https://www.paymentsjournal.com/wp-content/uploads/2021/12/secure-online-payment-internet-banking-via-credit-card-mobile-scaled.jpg')">

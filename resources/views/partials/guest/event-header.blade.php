@@ -42,9 +42,9 @@
                             <ul class="nav navbar-nav lgx-nav navbar-right">
                                 <li><a href="{{ route('guest.home') }}">Home</a></li>
                                 <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #about @else {{ route('guest.home') }}#about @endif">About</a></li>
-                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #about @else {{ route('guest.home') }}#schedule @endif">Schedule</a></li>
-                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #about @else {{ route('guest.home') }}#speaker @endif">Speakers</a></li>
-                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #about @else {{ route('guest.home') }}#sponsors @endif">Partners</a></li>
+                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #schedule @else {{ route('guest.home') }}#schedule @endif">Schedule</a></li>
+                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #speakers @else {{ route('guest.home') }}#speakers @endif">Speakers</a></li>
+                                <li><a class="lgx-scroll" href="@if(Route::is('guest.home') ) #sponsors @else {{ route('guest.home') }}#sponsors @endif">Partners</a></li>
                                 @if(Auth::user() && Auth::user()->role_id == 3)
                                 <li><a  href="{{ route('account.profile') }}">My Dashboard</a></li>
                                     {{-- <a class="lgx-btn lgx-btn-red" href="#">{{ explode(" ", Auth::user()->name)[0] ."s' Dashboard" }}</a> --}}

@@ -272,7 +272,7 @@
                     <div class="lgx-left-area lgx-leftright-info">
                         <div class="lgx-leftright-info-inner">
                             <h3 class="title">Important Dates</h3>
-                            <p class="info">Please note of the following dates</p>
+                            <p class="info">Please note the following dates</p>
                             <p>
                                 {!! ($event->important_dates) !!}
                             </p>

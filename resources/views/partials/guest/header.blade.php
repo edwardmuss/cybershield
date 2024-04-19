@@ -12,11 +12,11 @@
     <!--HEADER-->
     <header>
         <div id="lgx-header" class="lgx-header">
-            <div class="lgx-header-position lgx-header-position-white2 lgx-header-position-fixed2"> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
+            <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed"> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
                 <div class="lgx-container"> <!--lgx-container-fluid-->
                     <nav class="navbar navbar-default lgx-navbar">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" style="colo:#fff;" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <button type="button" class="navbar-toggle collapsed" style="color:#fff;" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -24,7 +24,7 @@
                             </button>
                             <div class="lgx-logo">
                                 <a href="{{ route('guest.home') }}" class="lgx-scroll">
-                                    <img src="{{ asset('frontend/assets/img//conferences-logo.png') }}" alt="Daystar Conferences Logo"/>
+                                    <img class="img-fluid" src="{{ asset('frontend/assets/img/conferences-logo.png') }}" width="200" alt="Conference Logo"/>
                                 </a>
                             </div>
                         </div>

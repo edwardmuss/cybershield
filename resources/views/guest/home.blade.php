@@ -82,8 +82,43 @@
         @endif
     </section>
 
-        <!--ABOUT-->
+    <!--ABOUT-->
+
     <section>
+        <div id="lgx-about" class="lgx-about">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">About</h2>
+                                    <h3 class="subheading">{{ $event->title }}</h3>
+                                </div>
+                                <div class="lgx-about-content">
+                                    <p class="text">
+                                        {!! \Illuminate\Support\Str::limit(strip_tags($event->description), 350) !!}
+                                    </p>
+                                    <div class="section-btn-area">
+                                        <a class="lgx-btn" href="{{ route('event.show', $event->slug) }}">READ MORE</a>
+                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="{{ route('auth.register') }}">REGISTER</a>
+                                        @if($event->cfp_file != NULL)
+                                            <a href="{{ asset('uploads/abstracts') }}/{{ $event->cfp_file }}" target="_blank" class="lgx-btn lgx-btn-white text-white" style="background: orange">Conference Call (PDF)</a>
+                                        @endif
+                                        @if($event->abstract_link != NULL)
+                                            <a href="{{ $event->abstract_link }}" target="_blank" class="lgx-btn btn-danger">Submit Abstract</a>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+
+    <section style="display: none">
         <div id="about" class="lgx-about">
             <div class="lgx-inner">
                 <div class="container">
@@ -201,16 +236,70 @@
     </section>
     <!--REGISTRATION END-->
 
+    <!-- MORE ABOUT -->
+    <section>
+        <div id="lgx-travelinfo" class="lgx-travelinfo">
+            <div class="lgx-inners">
+                <div class="lgx-leftright-area">
+                    <div class="lgx-left-area lgx-leftright-info">
+                        <div class="lgx-leftright-info-inner">
+                            <h3 class="title">Payment Details</h3>
+                            <p class="info">Co-operative Bank (K) Ltd,</p>
+                                <p><strong>Payments should be made in favour of Daystar University,</strong></p>
+                                <ul>
+                                    <li>A/C Number (KES): <strong>01120065209800</strong>,</li>
+                                    <li>A/C Number (Dollar): <strong>02120065209800</strong>.</li>
+                                    <li>Swift Code: <strong>KCOOKENA</strong></li>
+                                </ul>
+
+                                <p class="info">MPESA:</strong></p>
+
+                                <ul>
+                                    <li>Playbill Number: <strong>209800</strong>,</li>
+                                    <li>Account Number: <strong>Cybersecurity</strong></li>
+                                </ul>
+                            <a class="lgx-btn" href="#">Register</a>
+                        </div>
+                    </div>
+                    <div class="lgx-right-area lgx-venu-img" style="background-image: url('https://www.paymentsjournal.com/wp-content/uploads/2021/12/secure-online-payment-internet-banking-via-credit-card-mobile-scaled.jpg')">
+    
+                    </div>
+                </div>
+                <div class="lgx-leftright-area">
+                    <div class="lgx-right-area lgx-transport-img" style="background-image: url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+    
+                    </div>
+                    <div class="lgx-left-area lgx-leftright-info">
+                        <div class="lgx-leftright-info-inner">
+                            <h3 class="title">Important Dates</h3>
+                            <p class="info">Please note of the following dates</p>
+                            <p>
+                                {!! ($event->important_dates) !!}
+                            </p>
+                            @if($event->registration_link == NULL)
+                                <a class="lgx-btn" href="{{ route('account.eventregistration.show', $event->slug) }}"><span>Register</span></a>
+                            @else
+                                <a class="lgx-btn" href="{{ $event->registration_link }}"><span>Register</span></a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //.INNER -->
+        </div>
+    </section>
+    <!-- MORE ABOUT -->
+
     <!--SPONSORED-->
     <section>
-        <div id="lgx-sponsors" class="lgx-sponsors2">
+        <div id="sponsors" class="lgx-sponsors2">
             <div class="lgx-inner-bg">
                 <div class="lgx-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="lgx-heading">
-                                    <h2 class="heading">Partners/Sponsors</h2>
+                                    <h2 class="heading">Partners</h2>
                                     <h3 class="subheading">The following have partnered with us</h3>
                                 </div>
                             </div>
@@ -219,7 +308,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 {{-- <h3 class="sponsored-heading first-heading">Gold Sponsors</h3> --}}
-                                <div class="sponsors-area">
+                                <div class="sponsors-area sponsors-area-colorfull2">
                                     @if($partner_count > 0)
                                     @foreach($partners as $partner)
                                     <div class="single">

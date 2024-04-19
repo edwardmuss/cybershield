@@ -13,7 +13,7 @@ function sendMail($email_data, $to, $to_name, $subject)
     $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
     $beautymail->send('emails.email_v1', ['data' => $data], function ($message) use ($to, $to_name, $subject) {
         $message
-            ->from('elisili@daystar.ac.ke')
+            ->from(env('MAIL_FROM_ADDRESS'))
             ->to($to, $to_name)
             ->subject($subject);
     });
@@ -34,7 +34,7 @@ function sendDefaultMail($email_data, $to, $to_name, $subject)
     $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
     $beautymail->send('emails.default', ['data' => $data], function ($message) use ($to, $to_name, $subject) {
         $message
-            ->from('elisili@daystar.ac.ke')
+            ->from(env('MAIL_FROM_ADDRESS'))
             ->to($to, $to_name)
             ->subject($subject);
     });

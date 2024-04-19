@@ -35,7 +35,7 @@
                                         <a class="lgx-btn lgx-btn-red" href="#logout" onclick="$('#logout').submit();">{{ "Logout" }}</a>
                                         {{-- <a class="lgx-btn lgx-btn-red" href="#">{{ explode(" ", Auth::user()->name)[0] ."s' Dashboard" }}</a> --}}
                                     @else
-                                        <a class="lgx-btn lgx-btn-red" href="{{ route('auth.register') }}">Register</a>
+                                        <a class="lgx-btn lgx-btn-red" href="https://globalcybershield.eventify.io/t2/register/1796229898573715">Register</a>
                                     @endif
                                 </div>
                             </div>

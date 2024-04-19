@@ -85,7 +85,7 @@
     <!--ABOUT-->
 
     <section>
-        <div id="lgx-about" class="lgx-about">
+        <div id="about" class="lgx-about">
             <div class="lgx-inner">
                 <div class="container">
                     <div class="row">
@@ -101,9 +101,9 @@
                                     </p>
                                     <div class="section-btn-area">
                                         <a class="lgx-btn" href="{{ route('event.show', $event->slug) }}">READ MORE</a>
-                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="{{ route('auth.register') }}">REGISTER</a>
+                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="{{ $event->registration_link }}">REGISTER</a>
                                         @if($event->cfp_file != NULL)
-                                            <a href="{{ asset('uploads/abstracts') }}/{{ $event->cfp_file }}" target="_blank" class="lgx-btn lgx-btn-white text-white" style="background: orange">Conference Call (PDF)</a>
+                                            <a href="{{ asset('uploads/abstracts') }}/{{ $event->cfp_file }}" target="_blank" class="lgx-btn lgx-btn-white text-white" style="background: #444">Conference Call (PDF)</a>
                                         @endif
                                         @if($event->abstract_link != NULL)
                                             <a href="{{ $event->abstract_link }}" target="_blank" class="lgx-btn btn-danger">Submit Abstract</a>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="section-btn-area">
                                     <a href="{{ route('event.show', $event->slug) }}" class="lgx-btn lgx-btn-red" id="open-overlay">Event Details</a>
-                                    <a href="{{ route('auth.register') }}" class="lgx-btn lgx-btn-red">Register</a>
+                                    <a href="{{ $event->registration_link }}" class="lgx-btn lgx-btn-red">Register</a>
                                     @if($event->cfp_file != NULL)
                                         <a href="{{ asset('uploads/abstracts') }}/{{ $event->cfp_file }}" target="_blank" class="lgx-btn lgx-btn-white text-white" style="background: orange">Download Call for Papers (PDF)</a>
                                     @endif

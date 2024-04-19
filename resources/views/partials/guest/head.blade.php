@@ -8,18 +8,18 @@
 
     <!-- SITE TITLE -->
     <title>
-        @yield('title') | GCC 2024
+        @yield('title') | Global Cybershield Conference GCC 2024
      </title>
       <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="author" content="Daystar University">
      <meta name="description" content="@yield('description')">
-     <meta name="keywords" content="Daystar University, GCC 2024">
+     <meta name="keywords" content="Daystar University, Global Cybershield Conference GCC 2024">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
      <!--START og for social sharing -->
-     <meta property="og:site_name" content="GCC 2024">
-     <meta property="og:title" content="@yield('title') | GCC 2024">
+     <meta property="og:site_name" content="Global Cybershield Conference GCC 2024">
+     <meta property="og:title" content="@yield('title') | Global Cybershield Conference GCC 2024">
      <meta property="og:description" content="@yield('description')">
      <meta property="og:image" itemprop="image" content="@yield('image')">
      <meta property="og:url" content="https://conferences.daystar.ac.ke/" />

@@ -251,7 +251,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2 class="lgx-video-title text-center text-white"><span>Watch Our Promo video! </span>And Learn About Daystar</h2>
+                            <h2 class="lgx-video-title text-center text-white"><span>Watch Our Promo video!</h2>
                             <div class="lgx-video-area">
                                 <figure>
                                     <figcaption>

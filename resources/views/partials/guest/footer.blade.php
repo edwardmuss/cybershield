@@ -31,15 +31,13 @@
                             <li><a href="https://twitter.com/DaystarUni"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="https://www.instagram.com/daystar_uni/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/daystar-university-569b66164/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
                         </ul>
                     </div>
                 </div>
 
                 <div class="lgx-footer-bottom">
                     <div class="lgx-copyright">
-                        <p> <span>©</span> {{ date('Y') }} Conferences Powered by <a href="https://www.daystar.ac.ke/">Daystar University.</a> </p>
+                        <p> <span>©</span> {{ date('Y') }} GCC 2024 Powered by <a href="https://www.daystar.ac.ke/">Daystar University.</a> and <a href="#">CyberPro.</a> </p>
                     </div>
                 </div>
 

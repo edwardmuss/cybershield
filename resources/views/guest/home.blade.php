@@ -256,7 +256,7 @@
 
                                 <ul>
                                     <li>Playbill Number: <strong>209800</strong>,</li>
-                                    <li>Account Number: <strong>Cybersecurity</strong></li>
+                                    <li>Account Number: <strong>Cybersecurity Your Name</strong></li>
                                 </ul>
                             <a class="lgx-btn" href="{{ $event->registration_link }}">Register</a>
                         </div>

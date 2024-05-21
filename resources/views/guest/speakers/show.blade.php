@@ -4,7 +4,7 @@
 @section( 'image', "https://conferences.daystar.ac.ke/uploads/speakers/$speaker->image" )
 
 @section('content')
-    @include('partials.guest.header')
+@include('partials.guest.event-header')
     <!--Banner Inner-->
     <section>
         <div class="lgx-banner lgx-banner-inner" style="background-image: url('{{ asset('frontend/assets/img/header-image.jpg') }}')">

@@ -303,7 +303,7 @@
                         </div>
                     </div>
                     <!--//.ROW-->
-                    <div class="row row-eq-height">
+                    <div class="row row-eq-height3">
                         @if($speakers != Null)
                         @foreach($speakers as $speaker)
                         <div class="col-xs-12 col-sm-6 col-md-3">

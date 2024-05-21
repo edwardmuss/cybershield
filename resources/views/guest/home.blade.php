@@ -331,7 +331,7 @@
                         @endif
                     </div>
                     <!--//.ROW-->
-                    @if($speaker_count > 12)
+                    @if($speaker_count > 4)
                         <div class="section-btn-area">
                             <a class="lgx-btn lgx-btn-big" href="{{ route('event-speakers.index') }}">More Speakers</a>
                         </div>

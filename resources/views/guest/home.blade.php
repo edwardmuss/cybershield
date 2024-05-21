@@ -291,7 +291,7 @@
     <!-- MORE ABOUT -->
     <!--SPEAKERS-->
     <section>
-        <div id="speakers" class="lgx-speakers lgx-speakers2" style="background-image: url('{{ asset('frontend/assets/img/speakers.jpg') }}')">
+        <div id="speakers" class="lgx-speakers2 lgx-speakers2" style="background-image: url('{{ asset('frontend/assets/img/speakers.jpg') }}')">
             <div class="lgx-inner">
                 <div class="container">
                     <div class="row">
@@ -306,8 +306,8 @@
                     <div class="row row-eq-height3">
                         @if($speakers != Null)
                         @foreach($speakers as $speaker)
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="lgx-single-speaker2 lgx-single-speaker3"> <!--lgx-single-speaker lgx-single-speaker2 lgx-single-speaker3-->
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="lgx-single-speaker2 lgx-single-speaker3">
                                 <figure>
                                     <a class="profile-img" href="{{ route('event-speakers.show', $speaker->slug) }}"><img src="{{ asset('uploads/speakers') }}/{{ $speaker->image }}" alt="{{ $speaker->name }}"/></a>
                                     <figcaption>
@@ -318,8 +318,8 @@
                                             <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div> --}}
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="{{ route('event-speakers.show', $speaker->slug) }}">{{ $speaker->name }}</a></h3>
-                                            <h4 class="subtitle">{{ $speaker->title }}</h4>
+                                            <h3 class="title"><a href="{{ route('event-speakers.show', $speaker->slug) }}">{!! \Illuminate\Support\Str::limit(strip_tags($speaker->name), 20) !!}</a></h3>
+                                            <h4 class="subtitle">{!! \Illuminate\Support\Str::limit(strip_tags($speaker->title), 20) !!}</h4>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -331,7 +331,7 @@
                         @endif
                     </div>
                     <!--//.ROW-->
-                    @if($speaker_count > 4)
+                    @if($speaker_count > 12)
                         <div class="section-btn-area">
                             <a class="lgx-btn lgx-btn-big" href="{{ route('event-speakers.index') }}">More Speakers</a>
                         </div>

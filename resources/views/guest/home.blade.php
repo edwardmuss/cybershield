@@ -289,6 +289,60 @@
         </div>
     </section>
     <!-- MORE ABOUT -->
+    <!--SPEAKERS-->
+    <section>
+        <div id="speakers" class="lgx-speakers lgx-speakers2" style="background-image: url('{{ asset('frontend/assets/img/speakers.jpg') }}')">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading lgx-heading-white">
+                                <h2 class="heading">Who's Speaking</h2>
+                                <h3 class="subheading">Here is a list of the speakers who will be speaking</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.ROW-->
+                    <div class="row row-eq-height">
+                        @if($speakers != Null)
+                        @foreach($speakers as $speaker)
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="lgx-single-speaker2 lgx-single-speaker3"> <!--lgx-single-speaker lgx-single-speaker2 lgx-single-speaker3-->
+                                <figure>
+                                    <a class="profile-img" href="{{ route('event-speakers.show', $speaker->slug) }}"><img src="{{ asset('uploads/speakers') }}/{{ $speaker->image }}" alt="{{ $speaker->name }}"/></a>
+                                    <figcaption>
+                                        {{-- <div class="social-group">
+                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
+                                            <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>
+                                            <a class="sp-insta" href="#"><i class="fa fa-instagram"></i></a>
+                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
+                                        </div> --}}
+                                        <div class="speaker-info">
+                                            <h3 class="title"><a href="{{ route('event-speakers.show', $speaker->slug) }}">{{ $speaker->name }}</a></h3>
+                                            <h4 class="subtitle">{{ $speaker->title }}</h4>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        @endforeach
+                        @else
+                            <p class="text-danger text-center">Speaker info has not been updated</p>
+                        @endif
+                    </div>
+                    <!--//.ROW-->
+                    @if($speaker_count > 12)
+                        <div class="section-btn-area">
+                            <a class="lgx-btn lgx-btn-big" href="{{ route('event-speakers.index') }}">More Speakers</a>
+                        </div>
+                    @endif
+                </div>
+                <!-- //.CONTAINER -->
+            </div>
+            <!-- //.INNER -->
+        </div>
+    </section>
+    <!--SPEAKERS END-->
 
     <!--SPONSORED-->
     <section>

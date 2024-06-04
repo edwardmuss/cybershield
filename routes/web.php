@@ -35,7 +35,7 @@ Route::post('/764554', function () {
 
 //Route::get('events', 'Guest\EventsController@index')->name('events.index');
 //Route::get('events/{event}', 'Guest\EventsController@show')->name('events.show');
-Route::get('events/{slug}/resources', 'Guest\EventsController@resources');
+Route::get('/resources', 'Guest\EventsController@resources');
 Route::resource('event', 'Guest\EventsController');
 Route::resource('event-speakers', 'Guest\SpeakersController');
 Route::resource('sponsors-and-partners', 'Guest\PartnersController');

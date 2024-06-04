@@ -146,7 +146,7 @@ class EventsController extends Controller
         return view('guest.events.show', compact('event', 'tickets', 'speakers', 'speaker_count', 'partners', 'partner_count', 'organizers', 'organizer_count'));
     }
 
-    public function resources($slug) {
+    public function resources() {
         return view('guest.events.resources');
     }
 }

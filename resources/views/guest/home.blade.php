@@ -160,6 +160,76 @@
     </section>
     <!--ABOUT END-->
 
+    <!--SCHEDULE-->
+    <section>
+        <div id="lgx-schedule" class="lgx-schedule12 lgx-schedule15 lgx-schedule-white">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading">
+                                <h2 class="heading">Event Program</h2>
+                                <h3 class="subheading">Welcome to <strong>{{ $event->title }}</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @if($event->day1_prog != NULL)
+                        <div class="col-xs-12">
+                            <div class="lgx-tab">
+                                <ul class="nav nav-pills lgx-nav">
+                                    <li class="active"><a data-toggle="pill" href="#home"><h3>First <span>Day</span></h3> <p>{{ date('D d M, Y', strtotime($event->start_time)) }}</p></a></li>
+                                    <li><a data-toggle="pill" href="#menu1"><h3>Second <span>Day</span></h3> <p>{{ date('D d M, Y', strtotime('+1 day', strtotime($event->start_time))) }}</p></a></li>
+                                    <li><a data-toggle="pill" href="#menu2"><h3>Third <span>Day</span></h3> <p>{{ date('D d M, Y', strtotime('+2 day', strtotime($event->start_time))) }}</p></a></li>
+                                    {{-- <li><a data-toggle="pill" href="#menu3"><h3>Fourth <span>Day</span></h3> <p><span>30 </span>Dec, 2019</p></a></li> --}}
+                                </ul>
+                                <div class="tab-content lgx-tab-content">
+    
+                                    <!-- Day One program-->
+                                    <div id="home" class="tab-pane fade in active">
+                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                            {!! $event->day1_prog !!}
+                                        </div>
+                                    </div>
+    
+                                    <!-- Day two program-->
+                                    <div id="menu1" class="tab-pane fade">
+                                        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                            {!! $event->day2_prog !!}
+                                        </div>
+                                    </div>
+    
+                                    <!-- Day three program-->
+                                    <div id="menu2" class="tab-pane fade">
+                                        <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+                                            {!! $event->day3_prog !!}
+                                        </div>
+                                    </div>
+    
+                                    <!-- Day four program-->
+                                    <div id="menu3" class="tab-pane fade">
+    
+                                        <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+                                            {!! $event->day4_prog !!}
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @else
+                            <p class="text-center text-danger">The program has not been uploaded yet</p>
+                        @endif
+                    </div>
+                    <!--//.ROW-->
+                </div>
+                <!-- //.CONTAINER -->
+            </div>
+            <!-- //.INNER -->
+        </div>
+    </section>
+    <!--SCHEDULE END-->
+
     <!--REGISTRATION-->
     <section>
         <div id="lgx-registration" class="lgx-registration lgx-registration3"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->

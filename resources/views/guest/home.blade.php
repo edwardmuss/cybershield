@@ -34,7 +34,7 @@
                                     <p class="location">{{ $event->slider_bottom_text }}</p>
                                     <div class="action-area">
                                         <div class="lgx-video-area">
-                                            <a class="lgx-btn btn-danger" href="{{ asset('uploads') }}/abstracts/Global-cybershield-conference-program-2024.pdf" target="_blank">PROGRAM</a>
+                                            <a class="lgx-btn lgx-btn-red" href="{{ asset('uploads') }}/abstracts/Global-cybershield-conference-program-2024.pdf" target="_blank">PROGRAM</a>
                                             <a class="lgx-btn btn-primary" href="{{ asset('uploads') }}/abstracts/Global-cybershield-conference-abstruct-presentation-order-2024.pdf" target="_blank">BOOK OF ABSTRACTS</a>
                                             {{-- <p class="video-area"><a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
                                                 <i class="fa fa-play " aria-hidden="true"></i>

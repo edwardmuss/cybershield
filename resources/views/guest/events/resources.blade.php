@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 @section( 'title', "Resources" )
 @section( 'description', "Download The Conference Resources such as the programmes of of Abstract...")
-@section( 'image', "https://conferences.daystar.ac.ke/events/hietec-2024/resources" )
+@section( 'image', "https://www.daystar.ac.ke/cybershield-conference/uploads/events/1712906458_tech-bg.jpg" )
 
 @section('content')
     @include('partials.guest.header')
@@ -40,25 +40,21 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Event Link</th>
+                                    <th>Link</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>Conference Programme</td>
-                                        <td> <a href="#" target="_blank">Download</a></td>
+                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global cybershield conference program 2024.pdf" target="_blank">Download</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Book of Abstract</td>
-                                        <td> <a href="#" target="_blank">Download</a></td>
+                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global cybershield conference abstruct presentation order 2024.pdf" target="_blank">Download</a></td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Feedback Form</td>
-                                        <td> <a href="#" target="_blank">Download</a></td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>

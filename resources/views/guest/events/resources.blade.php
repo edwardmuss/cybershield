@@ -47,12 +47,12 @@
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>Conference Programme</td>
-                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global cybershield conference program 2024.pdf" target="_blank">Download</a></td>
+                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global-cybershield-conference-program-2024.pdf" target="_blank">Download</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Book of Abstract</td>
-                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global cybershield conference abstruct presentation order 2024.pdf" target="_blank">Download</a></td>
+                                        <td> <a href="{{ asset('uploads') }}/abstracts/Global-cybershield-conference-abstruct-presentation-order-2024.pdf" target="_blank">Download</a></td>
                                     </tr>
                                     
                                 </tbody>
